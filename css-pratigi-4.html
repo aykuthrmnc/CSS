@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Pratiği 4</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        min-height: 100dvh;
+        /* height: 100%; */
+        width: 100%;
+        display: grid;
+        padding: 10px;
+        align-items: center;
+        background-color: #222;
+        gap: 15px;
+      }
+
+      .item {
+        aspect-ratio: 16/7;
+        background-color: #444;
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        color: #fff;
+        font-size: 20px;
+        /* height: 100%; */
+        min-height: 30vh;
+      }
+
+      .container:has(.item:nth-child(2)) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .container:has(.item:nth-child(3)) .item {
+        aspect-ratio: initial;
+        height: 100%;
+      }
+      .container:has(.item:nth-child(5)) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .container:has(.item:nth-child(10)) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">Item</div>
+      <div class="item">Item</div>
+      <div class="item">Item</div>
+      <div class="item">Item</div>
+      <div class="item">Item</div>
+      <div class="item">Item</div>
+      <div class="item">Item</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fatura | Aykuthrmnc</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+      /* @media print {
+        @page {
+          width: 21cm;
+          height: 29.7cm;
+          margin: 0 auto;
+        }
+      } */
+
+      body {
+        width: 21cm;
+        height: 29.7cm;
+        margin: 0 auto;
+      }
+
+      .invoice-title {
+        font-size: 36px;
+        color: #333;
+      }
+
+      .invoice-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+
+      .invoice-header,
+      .invoice-footer {
+        padding: 20px;
+      }
+
+      .invoice-header {
+        border-bottom: 1px solid #eee;
+      }
+
+      .invoice-footer {
+        border-top: 1px solid #eee;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        text-align: center;
+        margin-top: auto;
+      }
+
+      .invoice-items {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .invoice-item {
+        width: 35%;
+        margin-bottom: 10px;
+      }
+
+      .invoice-item .item-name {
+        font-weight: bold;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .invoice-left,
+      .invoice-right {
+        width: 35%;
+      }
+
+      .invoice-center {
+        width: 15%;
+        text-align: center;
+      }
+
+      .invoice-right {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      tbody,
+      th,
+      tfoot tr td:nth-child(2) {
+        border: 2px solid #210fab;
+      }
+
+      tbody tr td {
+        border-right: 2px solid #210fab;
+      }
+
+      tfoot tr td:nth-child(2) div {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="invoice-header">
+        <div class="invoice-left">
+          <h1 class="invoice-title">Fatura</h1>
+          <strong>AYKUT HARMANCI</strong>
+          <div><strong>Adres:</strong> Selçuklu/KONYA</div>
+          <div><strong>Tel:</strong> +905555555555</div>
+          <div><strong>Web Sitesi:</strong> aykuthrmnc.com</div>
+        </div>
+        <div class="invoice-center">
+          <img src="https://localhost:44303/resources/html/gib_400px.png" />
+          <strong>E-Arşiv Fatura</strong>
+        </div>
+        <div class="invoice-right">
+          <strong>Fatura Tipi:</strong> SATIS <strong>Sipariş Tarihi:</strong> 18.12.2022 14:39:18 <strong>Sipariş Numarası:</strong> 4
+        </div>
+      </div>
+      <div class="invoice-items">
+        <div class="invoice-item">
+          <div class="item-name">Teslimat Adresi</div>
+          <div>Sancak</div>
+        </div>
+        <div class="invoice-item">
+          <div class="item-name">Fatura Adresi</div>
+          <div>Sancak</div>
+        </div>
+        <!-- Add more invoice items as needed -->
+      </div>
+      <div class="invoice-products">
+        <table class="table">
+          <thead>
+            <tr>
+              <th width="60%">Açıklama</th>
+              <th>Birim Fiyat</th>
+              <th>Adet</th>
+              <th>Tutar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Acer Nitro AN515-45</td>
+              <td>22000</td>
+              <td>2</td>
+              <td>44000</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="2"></td>
+              <td colspan="2">
+                <div>
+                  <div>Mal Hizmet Toplam Tutarı</div>
+                  <div>544,92 TL</div>
+                </div>
+                <div>
+                  <div>Toplam İskonto</div>
+                  <div>0,00 TL</div>
+                </div>
+                <div>
+                  <div>KDV Matrahı</div>
+                  <div>544,92 TL</div>
+                </div>
+                <div>
+                  <div>Hesaplanan KDV</div>
+                  <div>98,08 TL</div>
+                </div>
+                <div>
+                  <div>Vergiler Dahil Toplam Tutar</div>
+                  <div>643,00 TL</div>
+                </div>
+                <div>
+                  <div>Ödenecek Tutar</div>
+                  <div>643,00 TL</div>
+                </div>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <div class="invoice-footer">
+        <div>AYKUT HARMANCI</div>
+      </div>
+    </div>
+  </body>
+</html>

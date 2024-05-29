@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <style>
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
+      body {
+        margin: 1cm;
+      }
+      /* Custom styles */
+      .invoice-title {
+        font-size: 36px;
+        color: #333;
+      }
+      .invoice-header {
+        display: flex;
+        justify-content: space-between;
+      }
+      .invoice-header,
+      .invoice-footer {
+        padding: 20px;
+      }
+      .invoice-header {
+        border-bottom: 1px solid #eee;
+      }
+      .invoice-footer {
+        border-top: 1px solid #eee;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+      }
+      .invoice-items {
+        padding: 20px;
+      }
+      .invoice-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+      .invoice-item .item-name {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="invoice-header">
+        <h1 class="invoice-title">Invoice</h1>
+        <div>
+          <p><strong>Fatura Tarihi:</strong> 01.01.0001</p>
+          <p><strong>Fatura Numarası:</strong> 123456789</p>
+        </div>
+      </div>
+      <div class="invoice-items">
+        <div class="invoice-item">
+          <div class="item-name">Şirket Adı</div>
+          <div>AykutHrmnc</div>
+        </div>
+        <div class="invoice-item">
+          <div class="item-name">Adres</div>
+          <div>Selçuklu/KONYA</div>
+        </div>
+        <div class="invoice-item">
+          <div class="item-name">Telefon</div>
+          <div>+905555555555</div>
+        </div>
+        <div class="invoice-item">
+          <div class="item-name">Teslimat Adresi</div>
+          <div>Selçuklu/KONYA</div>
+        </div>
+        <div class="invoice-item">
+          <div class="item-name">Fatura Adresi</div>
+          <div>Selçuklu/KONYA</div>
+        </div>
+        <div class="invoice-item">
+          <div class="item-name">Fatura Tipi</div>
+          <div>Satış</div>
+        </div>
+        <!-- Add more invoice items as needed -->
+      </div>
+      <div class="invoice-footer">
+        <p>Bizi tercih ettiğiniz için teşekkür ederiz.</p>
+      </div>
+    </div>
+  </body>
+</html>

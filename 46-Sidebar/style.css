@@ -1,0 +1,262 @@
+@import "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap";
+
+* {
+  padding: 0;
+  text-decoration: none;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  padding: 10px;
+}
+
+.sidebar {
+  width: 300px;
+  height: 100%;
+  background-color: #111;
+  border-radius: 14px;
+  padding: 0 14px 14px;
+  color: #fff;
+  position: relative;
+  transition: 230ms width;
+  display: flex;
+  flex-direction: column;
+
+  .toggle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #289df7;
+
+    position: absolute;
+    top: 16px;
+    left: 100%;
+    translate: -50%;
+
+    svg {
+      transition: 300ms all;
+      rotate: 180deg;
+      width: 18px;
+      height: 18px;
+    }
+
+    input[name="toggle"] {
+      display: none;
+    }
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    padding: 14px 0;
+    font-size: 18px;
+    font-weight: 600;
+    gap: 10px;
+    img {
+      height: 40px;
+      width: 40px;
+    }
+  }
+
+  .menu {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    a {
+      display: flex;
+      height: 40px;
+      border-radius: 4px;
+      align-items: center;
+      color: #fff;
+
+      &:is(:hover, .active) {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &::before {
+          content: attr(title);
+          position: absolute;
+          top: 50%;
+          left: 100%;
+          translate: 20px -50%;
+          background-color: #111;
+          padding: 3px 5px;
+          font-size: 12px;
+          border-radius: 4px;
+          white-space: nowrap;
+          opacity: 0;
+          visibility: hidden;
+          transition: 230ms opacity;
+        }
+
+        &::after {
+          content: "";
+          border: 4px solid transparent;
+          border-right-color: #111;
+          position: absolute;
+          top: 50%;
+          left: 100%;
+          translate: 12px -50%;
+          opacity: 0;
+          visibility: hidden;
+          transition: 230ms opacity;
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+
+      .hidden {
+        opacity: 1;
+        visibility: visible;
+        white-space: nowrap;
+        transition: 230ms opacity, 230ms visibility;
+      }
+    }
+  }
+
+  .search {
+    position: relative;
+    display: block;
+
+    label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      z-index: 1;
+      display: none;
+    }
+
+    .icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    input {
+      width: 100%;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      outline: none;
+      padding: 0 12px 0 40px;
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    .name {
+      font-size: 14px;
+    }
+
+    .email {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    button {
+      margin-left: auto;
+      margin-right: -14px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      color: #e55542;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &:has(input[name="toggle"]:checked) {
+    width: 68px;
+
+    .hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .toggle {
+      width: 26px;
+      height: 26px;
+
+      svg {
+        rotate: 0deg;
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    .search {
+      label {
+        display: block;
+      }
+
+      input {
+        padding-right: 0;
+      }
+    }
+
+    .menu .icon {
+      &:hover::before,
+      &:hover::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}

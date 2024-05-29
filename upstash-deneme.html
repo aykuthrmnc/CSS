@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --head-from-color: #35d399;
+        --head-to-color: #fbe048;
+        --body-color: #1b2728;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+        border: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: radial-gradient(var(--body-color), #000 70%);
+      }
+      h1 {
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to right, var(--head-from-color), var(--head-to-color));
+        font-size: 120px;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        & .col {
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 5px;
+          padding: 35px 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 5px;
+          cursor: pointer;
+          transition: all 250ms;
+
+          & h6 {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 500;
+          }
+          & p {
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 500;
+          }
+          & button {
+            height: 40px;
+            background: rgba(255, 255, 255, 1);
+            padding: 0 25px;
+            border-radius: 20px;
+            margin-top: 10px;
+            transition: all 250ms;
+          }
+          &:hover {
+            transform: scale(1.02);
+            background: rgba(255, 255, 255, 0.1);
+            & button {
+              color: #fff;
+              background: var(--head-from-color);
+            }
+          }
+          &:first-child {
+            border-radius: 40px 5px 5px 40px;
+          }
+          &:last-child {
+            border-radius: 5px 40px 40px 5px;
+          }
+        }
+
+        &:has(.col:hover) .col:not(.col:hover) button {
+          background: rgba(255, 255, 255, 0.05);
+          color: #fff;
+        }
+      }
+      body:has(.col:nth-child(1):hover) {
+        --head-from-color: #ef4444;
+        --head-to-color: #f5c9c8;
+        --body-color: #281b1b;
+      }
+      body:has(.col:nth-child(2):hover) {
+        --head-from-color: #4d80ee;
+        --head-to-color: #c2d8fa;
+        --body-color: #1b2028;
+      }
+      body:has(.col:nth-child(3):hover) {
+        --head-from-color: #9d59ee;
+        --head-to-color: #e4d3fb;
+        --body-color: #261b28;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Serverless <br />
+      Data Platform
+    </h1>
+    <div class="grid">
+      <div class="col">
+        <h6>Redis</h6>
+        <p>Serverless database with Redis API</p>
+        <button>Create Database</button>
+      </div>
+      <div class="col">
+        <h6>Kafka</h6>
+        <p>Serverless Kafka and Connectors</p>
+        <button>Create Cluster</button>
+      </div>
+      <div class="col">
+        <h6>QStash</h6>
+        <p>Messaging for the Serverless</p>
+        <button>Publish Messages</button>
+      </div>
+    </div>
+  </body>
+</html>

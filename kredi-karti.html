@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card {
+        width: 352px;
+        height: 223px;
+        position: relative;
+        perspective: 800px;
+      }
+
+      .front,
+      .back {
+        width: inherit;
+        height: inherit;
+        background: linear-gradient(31.58deg, #93278f -2.49%, #29abe2 67.92%);
+        border-radius: 15px;
+        position: absolute;
+        backface-visibility: hidden;
+        transition: all 1s;
+      }
+
+      .card .back {
+        transform: rotateY(180deg);
+      }
+
+      .card:hover .back {
+        transform: rotateY(0);
+      }
+      .card:hover .front {
+        transform: rotateY(-180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="front">A</div>
+      <div class="back">B</div>
+    </div>
+  </body>
+</html>

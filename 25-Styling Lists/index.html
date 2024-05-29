@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Lists</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Patrick+Hand+SC" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Lato', sans-serif;
+        }
+        ul {
+            list-style-type: none;
+            border: 1px solid #ddd;
+            padding: 0px;
+        }
+
+        ul li {
+            border-bottom: 1px solid #ddd;
+            padding: 7px 12px;
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+            padding: 7px 12px;
+        }
+
+        ol {
+            background-color: #f1f1f1;
+            list-style-type: none;
+            padding: 10px 20px;
+            border-left: 5px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>Web Developer Egitimi</li>
+        <li>Asp.net Mvc Egitimi</li>
+        <li>Asp.net Webform Egitimi</li>
+    </ol>
+    <ul>
+        <li>Web Developer Egitimi</li>
+        <li>Asp.net Mvc Egitimi</li>
+        <li>Asp.net Webform Egitimi</li>
+    </ul>
+</body>
+
+</html>

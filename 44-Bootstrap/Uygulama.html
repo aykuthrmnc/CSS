@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <script src="https://kit.fontawesome.com/2214b0cde0.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar {
+            opacity: 0.8;
+            border-bottom: 1px solid white;
+        }
+
+        .jumbo {
+            padding-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar bg-dark navbar-dark fixed-top navbar-expand-sm">
+        <div class="container">
+            <a href="#" class="navbar-brand text-decoration-none">
+                <i class="fas fa-blog"></i>&nbsp;Blog Template
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collabsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collabsibleNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="p-5 bg-dark text-white">
+        <div class="container jumbo">
+            <div class="col-md-5">
+                <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
+                <p class="lead my-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam non illum sequi velit vero
+                    excepturi facere tenetur perspiciatis necessitatibus recusandae.
+                </p>
+                <p class="lead mb-0">
+                    <a href="#" class="text-white fw-bold">Continue Reading...</a>
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="card mb-4">
+                        <img src="img/slider-1.jpeg" class="card-img-top img-thumbnail" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Post Title</h4>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto porro recusandae
+                                voluptatem consectetur soluta aliquid blanditiis quia placeat adipisci aspernatur.
+                            </p>
+                            <button type="button" class="btn btn-primary">Read More</button>
+                        </div>
+                        <div class="card-footer text-muted">Posted on January 1, 2019</div>
+                    </div>
+                    <div class="card mb-4">
+                        <img src="img/slider-2.jpeg" class="card-img-top img-thumbnail" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Post Title</h4>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto porro recusandae
+                                voluptatem consectetur soluta aliquid blanditiis quia placeat adipisci aspernatur.
+                            </p>
+                            <button type="button" class="btn btn-primary">Read More</button>
+                        </div>
+                        <div class="card-footer text-muted">Posted on January 1, 2019</div>
+                    </div>
+                    <div class="card mb-4">
+                        <img src="img/slider-3.jpeg" class="card-img-top img-thumbnail" alt="">
+                        <div class="card-body">
+                            <h4 class="card-title">Post Title</h4>
+                            <p class="card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto porro recusandae
+                                voluptatem consectetur soluta aliquid blanditiis quia placeat adipisci aspernatur.
+                            </p>
+                            <button type="button" class="btn btn-primary">Read More</button>
+                        </div>
+                        <div class="card-footer text-muted">Posted on January 1, 2019</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5>Search</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for...">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-secondary">Go!</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5>Categories</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#">Web Design</a></li>
+                                        <li><a href="#">Html</a></li>
+                                        <li><a href="#">Angular</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col">
+                                    <ul class="list-unstyled">
+                                        <li><a href="#">Javascript</a></li>
+                                        <li><a href="#">Css</a></li>
+                                        <li><a href="#">React</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <h5>Widget</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto nobis quas
+                                veritatis minima recusandae voluptas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </div>     
+    </main>
+
+    <footer class="py-5 bg-dark text-white text-center">
+        Copyright © Your Website 2019
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

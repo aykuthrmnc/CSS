@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Patrick+Hand+SC" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        .primary {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .primary:hover {
+            opacity: 0.7;
+        }
+
+        .secondary {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .secondary:hover {
+            opacity: 0.7;
+        }
+
+        .success {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .success:hover {
+            opacity: 0.7;
+        }
+
+        .danger {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .danger:hover {
+            opacity: 0.7;
+        }
+
+        .warning {
+            background-color: #ffc107;
+            color: white;
+        }
+
+        .warning:hover {
+            opacity: 0.7;
+        }
+
+        .btn-xs {
+            padding: 8px 15px;
+            font-size: 12px;
+        }
+
+        .btn-sm {
+            padding: 10px 22px;
+            font-size: 14px;
+        }
+
+        .btn-md {
+            padding: 12px 26px;
+            font-size: 16px;
+        }
+
+        .btn-lg {
+            padding: 14px 30px;
+            font-size: 16px;
+        }
+
+        .btn-bg {
+            font-size: 40px;
+        }
+
+        .btn-block {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .rounded {
+            border-radius: 50%;
+        }
+
+        .primary-outline {
+            background-color: white;
+            border: 1px solid #007bff;
+            color: #007bff;
+        }
+
+        .primary-outline:hover {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .secondary-outline {
+            background-color: white;
+            border: 1px solid #6c757d;
+            color: #6c757d;
+        }
+
+        .secondary-outline:hover {
+            background-color: #6c757d;
+            color: white;
+        }
+
+        .success-outline {
+            background-color: white;
+            border: 1px solid #28a745;
+            color: #28a745;
+        }
+
+        .success-outline:hover {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .danger-outline {
+            background-color: white;
+            border: 1px solid #dc3545;
+            color: #dc3545;
+        }
+
+        .danger-outline:hover {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .warning-outline {
+            background-color: white;
+            border: 1px solid #ffc107;
+            color: #ffc107;
+        }
+
+        .warning-outline:hover {
+            background-color: #ffc107;
+            color: white;
+        }
+
+        /*
+        a{
+            color: green;
+            text-decoration: none;
+        }
+        a:hover{
+            color: red;
+            font-size: 20px;
+            background: blue;
+            display: inline-block;
+            width: 100px;
+            text-decoration: underline;
+        }
+        */
+    </style>
+</head>
+
+<body>
+    <a class="btn primary" href="/link1">Primary</a>
+    <a class="btn secondary" href="/link2">Secondary</a>
+    <a class="btn success" href="/link2">Success</a>
+    <a class="btn danger" href="/link2">Danger</a>
+    <a class="btn warning" href="/link2">Warning</a>
+
+    <br><br><br><br>
+
+    <a class="btn primary btn-xs" href="/link1">Primary</a>
+    <a class="btn secondary btn-sm" href="/link2">Secondary</a>
+    <a class="btn success btn-md" href="/link2">Success</a>
+    <a class="btn danger btn-lg" href="/link2">Danger</a>
+    <a class="btn warning btn-bg" href="/link2">Warning</a>
+
+    <br><br><br><br>
+
+    <a class="btn primary btn-block" href="/link1">Primary</a>
+    <a class="btn secondary btn-block" href="/link2">Secondary</a>
+    <a class="btn secondary rounded" href="/link2">50%</a>
+
+    <br><br><br><br>
+
+    <a class="btn primary-outline" href="/link1">
+        <i class="fas fa-home"></i>
+        Primary
+    </a>
+    <a class="btn secondary-outline" href="/link2">
+        <i class="fas fa-trash-alt"></i>
+        Secondary
+    </a>
+    <a class="btn success-outline" href="/link2">
+        <i class="fab fa-android"></i>
+        Success
+    </a>
+    <a class="btn danger-outline" href="/link2">
+        <i class="fab fa-angular"></i>
+        Danger
+    </a>
+    <a class="btn warning-outline" href="/link2">
+        <i class="fab fa-facebook-square"></i>
+        Warning
+    </a>
+</body>
+
+</html>

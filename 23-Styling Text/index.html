@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Text</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <style>
+        body{
+            width: 700px;
+            margin: 30px auto;
+            font-family: 'Open Sans', sans-serif;
+        }
+        h2{
+            text-transform: capitalize;
+        }
+        p{
+            font-size: 22px;
+            line-height: 150%; /* Satir araliklari */
+            word-spacing: 3px; /* Kelime araliklari */
+            /*text-indent: 20px; /* Paragraf basi */
+            letter-spacing: 1px; /* Harf araliklari */
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .italic{
+            font-style: italic;
+        }
+        .link{
+            color: #03a9f4;
+            text-decoration: none; /* Varsayilan = underline;*/
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Yorum satiri -->
+    <h2>
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+    </h2>
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt voluptatum nihil ipsum esse, facere natus modi a
+        magni aut distinctio laudantium atque? Velit sint adipisci soluta nesciunt rerum dolorem 
+        <span class="bold italic">
+            <a class="link" href="#">autem.</a>
+        </span>
+    </p>
+</body>
+
+</html>

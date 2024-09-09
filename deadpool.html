@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deadpool | https://cssbattle.dev/play/204</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+      }
+      .wrapper {
+        position: absolute;
+        inset: 0;
+        background: #f3ac3c;
+      }
+      .head {
+        position: absolute;
+        /* top: 54px; left:100px; */
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        background: #9f3333;
+        border-radius: 50%;
+        translate: -50% -50%
+      }
+      .eye-wrapper {
+        position: absolute;
+        top: 17px;
+        left: 17px;
+        width: 166px;
+        height: 166px;
+        background: #000000;
+        border-radius: 50%;
+      }
+      .line {
+        position: absolute;
+        top: 0px;
+        left: 65px;
+        width: 36px;
+        height: 100%;
+        background: #9f3333;
+      }
+
+      .eye {
+        position: absolute;
+        top: 71px;
+        width: 29px;
+        height: 14px;
+        background: #ffffff;
+        border-bottom-left-radius: 29px;
+        border-bottom-right-radius: 29px;
+      }
+
+      .eye.left {
+        left: 18px;
+        rotate: 29deg;
+      }
+      .eye.right {
+        right: 19px;
+        rotate: -28deg;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="head">
+        <div class="eye-wrapper">
+          <div class="eye left"></div>
+          <div class="line"></div>
+          <div class="eye right"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
